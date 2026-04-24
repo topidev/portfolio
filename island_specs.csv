@@ -1,0 +1,5 @@
+﻿Componente,Directiva,Razón
+Sidebar,`client:load`,"Interactividad inmediata, estado persistente"
+Hero,`client:load`,Animación de entrada al cargar
+"Projects, About, Contact",`client:visible`,"Hidratan solo al entrar en viewport, optimiza bundle inicial"
+Footer,—,"Estático, sin JS"

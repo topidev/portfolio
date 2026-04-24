@@ -1,0 +1,10 @@
+﻿Capa,Tecnología,Versión,Propósito
+Framework,**Astro**,5.x,"SSG, rutas, API routes, optimización de performance"
+Islas interactivas,**React**,19.x,"Componentes con estado: sidebar, formulario, hero animado"
+Estilos,**Tailwind CSS**,4.x,"Utilidades, responsive, dark mode nativo"
+UI base,**Shadcn/ui**,latest,Componentes accesibles sin lock-in
+Animaciones,**Framer Motion**,latest,"Transiciones de sección, hover cards, sidebar toggle, toasts"
+Iconos,**Lucide React**,latest,Iconografía consistente
+Formularios,**React Hook Form** + **Zod**,latest,Validación cliente y servidor
+Email,**Resend**,latest,Envío de emails vía API Route Astro
+Fuentes,"**Ubuntu** (headings), **Inter** (body), **Ubuntu Mono** (labels/código)",Google Fonts,Jerarquía tipográfica técnica

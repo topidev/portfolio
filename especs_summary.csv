@@ -1,0 +1,9 @@
+﻿Aspecto,Decisión
+**Stack**,Astro 5 + React 19 + Tailwind 4 + Shadcn + Framer Motion
+**Estilo**,"Neo-brutalismo funcional, dark-first"
+**Tipografías**,Ubuntu (headings) + Inter (body) + Ubuntu Mono (labels)
+**Acento**,Azul `#2196F3`
+**Navegación**,Sidebar collapsible (desktop) / Bottom sheet (móvil)
+**Proyectos**,"Cards con clip-path, shadow offset, bottom sheet en móvil"
+**Contacto**,RHF + Zod + Resend via API Route
+**Estructura**,"`components/ui`, `layout`, `sections`, `shared`"

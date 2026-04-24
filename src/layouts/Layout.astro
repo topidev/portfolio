@@ -1,0 +1,55 @@
+---
+import "@/styles/global.css";
+import Providers from "@/components/providers";
+
+// src/layouts/Layout.astro
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Portfolio Desarrollador Web" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Ubuntu:wght@400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <script is:inline>
+      // Este script evita el FOUC - flash of unstyled content
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+
+      if (theme === "dark") document.documentElement.classList.add("dark");
+    </script>
+  </head>
+
+  <body class="min-h-screen bg-background text-foreground">
+    <Providers client:load>
+      <slot />
+    </Providers>
+  </body>
+</html>
