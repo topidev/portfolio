@@ -51,7 +51,9 @@ function Hexagon({ tech, index, className }: { tech: typeof TECH_STACK[0]; index
           relative flex h-16 w-16 items-center justify-center
           bg-card border-2 border-border
           transition-all duration-200 ease-out
-          md:h-26 md:w-26 
+          md:h-22 md:w-22 
+          lg:h-26 lg:w-26
+          xl:h-32 xl:w-32
           
           hover:-translate-x-1 hover:-translate-y-1
           hover:shadow-[5px_5px_0px_0px_hsl(var(--primary))]
@@ -109,8 +111,8 @@ export default function HeroShot() {
         " />
       </div>
 
-      <div className="container mx-auto flex min-h-screen items-center px-4 py-20 md:px-6">
-        <div className="grid w-full gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+      <div className="container mx-auto flex min-h-[92vh] items-center px-4 py-15 md:px-6">
+        <div className="grid w-full gap-12 lg:grid-cols-2 lg:gap-10 items-center">
 
           {/* Texto + CTA */}
           <motion.div
@@ -145,7 +147,6 @@ export default function HeroShot() {
                 className="
                   group font-mono
                   shadow-[4px_4px_0px_0px_hsl(var(--primary))]
-                  hover:-translate-x-1 hover:-translate-y-1
                   hover:shadow-[6px_6px_0px_0px_hsl(var(--primary))]
                   transition-all
                 "

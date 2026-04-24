@@ -35,6 +35,7 @@ const LINKS = [
   { id: "contact", label: "_CONTACT", icon: Mail },
 ]
 
+
 export default function SideBar() {
   const { state, toggleSidebar } = useSidebar()
   const [active, setActive] = useState("hero")
