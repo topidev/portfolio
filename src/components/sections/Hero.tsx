@@ -111,7 +111,7 @@ export default function HeroShot() {
         " />
       </div>
 
-      <div className="container mx-auto flex min-h-[92vh] items-center px-4 py-15 md:px-6">
+      <div className="container mx-auto flex min-h-[90vh] items-center px-4 py-15 md:px-6">
         <div className="grid w-full gap-12 lg:grid-cols-2 lg:gap-10 items-center">
 
           {/* Texto + CTA */}
@@ -179,7 +179,7 @@ export default function HeroShot() {
           </motion.div>
 
           {/* Panal Real: 1 centro + 6 alrededor */}
-          <motion.div className="hidden lg:flex items-center justify-center">
+          <motion.div className=" lg:flex items-center justify-center">
             <div className="flex flex-col items-center gap-.5">
               {/* Fila 1: 2 items */}
               <div className="flex gap-1">

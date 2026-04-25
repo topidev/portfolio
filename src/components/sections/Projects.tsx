@@ -31,7 +31,7 @@ const PROJECTS: Project[] = [
   {
     id: "1",
     title: "Veterinaria",
-    hook: "Agenda de reservaciones y seguimiento clínico",
+    hook: "Reservaciones y seguimiento clínico",
     description: "Sistema de registro, consulta, mensajes y reservaciones para una Veterinaria",
     img: "/images/vet.png",
     linkGithub: "https://github.com/topidev/veterinaria",
@@ -41,7 +41,7 @@ const PROJECTS: Project[] = [
   {
     id: "2",
     title: "Florería",
-    hook: "Orden y compra de flores en linea",
+    hook: "E-commerce para Florería",
     description: "Pagina web orientada a compras, persistencia de datos, carrito, login.",
     img: "/images/dessetBloom.png",
     linkGithub: "https://github.com/topidev/floreria-la-paz",
@@ -61,11 +61,11 @@ const PROJECTS: Project[] = [
   {
     id: "4",
     title: "SEDA",
-    hook: "Sistema Escolar de Alumnos",
+    hook: "Sistema Escolar de Alumnos (CRUD)",
     description: "CRUD Básico para Profesores. Manejo de escuelas, materias, alumnos y evaluaciones",
     img: "/images/SEDA.png",
     linkGithub: "https://github.com/topidev/SEDA",
-    linkVercel: "https://proyecto4.vercel.app",
+    linkVercel: "",
     stack: ["TypeScript", "Firebase", "Next.js", "Talwind"]
   },
 ]
@@ -161,7 +161,12 @@ function ProjectCard({ project, onOpen, onImageClick }:
                 className="flex-1 font-mono text-xs"
                 asChild
               >
-                <a href={project.linkVercel} target="_blank" rel="noopener">
+                <a
+                  href={project.linkVercel}
+                  target="_blank"
+                  rel="noopener"
+                  className={`${project.linkVercel.trim() === "" ? 'pointer-events-none opacity-30' : ''}`}
+                >
                   <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
                   Live
                 </a>
@@ -220,7 +225,7 @@ export default function Projects() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
 
   return (
-    <section id="projects" className="py-20 px-4 md:px-6 lg:px-8">
+    <section id="projects" className="py-24 px-4 md:px-2 lg:px-4">
       <div className="max-w- mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -235,7 +240,7 @@ export default function Projects() {
             Trabajos Destacados
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl">
-            Selección de proyectos donde aplico arquitectura limpia, performance y UX brutalista.
+            Selección de proyectos donde aplico arquitectura limpia, performance y UX.
           </p>
         </motion.div>
 
@@ -308,8 +313,15 @@ export default function Projects() {
                       Código
                     </a>
                   </Button>
-                  <Button className="flex-1 font-mono" asChild>
-                    <a href={selectedProject.linkVercel} target="_blank" rel="noopener">
+                  <Button
+                    className="flex-1 font-mono"
+                    asChild>
+                    <a
+                      href={selectedProject.linkVercel}
+                      target="_blank"
+                      rel="noopener"
+                      className={`${selectedProject.linkVercel.trim() === "" ? 'pointer-events-none opacity-30' : ''}`}
+                    >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Ver Live
                     </a>
@@ -344,9 +356,10 @@ export default function Projects() {
               size="icon"
               variant="outline"
               onClick={() => setLightboxImage(null)}
-              className="
+              className="                
                 absolute -top-3 -right-3 h-10 w-10 rounded-full
-                bg-card border-2 border-border cursor-pointer
+                border-2 border-border cursor-pointer
+                bg-card
                 shadow-[4px_4px_0px_0px_hsl(var(--foreground))]
                 hover:-translate-x-0.5 hover:-translate-y-0.5
                 hover:shadow-[5px_5px_0px_0px_hsl(var(--foreground))]

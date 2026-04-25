@@ -14,7 +14,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
           <ClientSidebarTrigger />
           <Separator orientation="vertical" className="h-4" />
         </header>
-        <main className="flex-1  w-full max-w-[1500px] mx-auto">
+        <main className="flex-1 w-[calc(100%-48px)] max-w-[1500px] mx-auto ">
           {children}
         </main>
       </SidebarInset>

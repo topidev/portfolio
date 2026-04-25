@@ -12,8 +12,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-import { Button } from "@/components/ui/button"
 import {
   Presentation,
   FolderCode,
@@ -28,10 +26,10 @@ import {
 import { ThemeToggle } from "./ThemeToggle"
 
 const LINKS = [
-  { id: "hero", label: "_HERO", icon: Presentation },
-  { id: "projects", label: "_PROJECTS", icon: FolderCode },
+  { id: "hero", label: "_HOME", icon: Presentation },
   { id: "about", label: "_ABOUT_ME", icon: ShieldUser },
-  { id: "stack", label: "_STACK", icon: Code },
+  { id: "projects", label: "_PROJECTS", icon: FolderCode },
+  // { id: "stack", label: "_STACK", icon: Code },
   { id: "contact", label: "_CONTACT", icon: Mail },
 ]
 

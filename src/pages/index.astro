@@ -1,10 +1,14 @@
 ---
+import About from "@/components/sections/About";
 import HeroShot from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import Layout from "@/layouts/Layout.astro";
+import Contact from "@/components/sections/Contact";
 ---
 
 <Layout title="Topi.dev | Full Stack Developer">
 	<HeroShot client:load />
+	<About client:visible />
 	<Projects client:visible />
+	<Contact client:visible />
 </Layout>
