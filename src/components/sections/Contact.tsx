@@ -14,12 +14,6 @@ import { toast } from "sonner"
 
 type ContactFormData = z.infer<typeof contactSchema>
 
-type ToastState = {
-  show: boolean
-  type: "success" | "error"
-  message: string
-}
-
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -31,7 +25,7 @@ export default function Contact() {
     watch,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
-    mode: "onChange", // Validación en tiempo real
+    mode: "onChange",
   })
 
   const messageLength = watch("message")?.length || 0
@@ -40,8 +34,6 @@ export default function Contact() {
     setIsSubmitting(true)
 
     try {
-      // Aquí va tu lógica de envío - Resend, Nodemailer, API route, etc
-      // Ejemplo con API route:
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
