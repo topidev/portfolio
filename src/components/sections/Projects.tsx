@@ -36,7 +36,7 @@ const PROJECTS: Project[] = [
     img: "/images/vet.png",
     linkGithub: "https://github.com/topidev/veterinaria",
     linkVercel: "https://veterinaria-seven-ruby.vercel.app/",
-    stack: ["Next.js", "Supabase", "Tailwind", "React"]
+    stack: ["Next.js", "Supabase", "Shadc", "React"]
   },
   {
     id: "2",
@@ -56,7 +56,7 @@ const PROJECTS: Project[] = [
     img: "/images/flowTask.png",
     linkGithub: "https://github.com/topidev/todo-list-astro",
     linkVercel: "https://todo-list-astro-chi.vercel.app/",
-    stack: ["Astro", "Shadcn", "TypeScript", "FireBase"]
+    stack: ["Astro", "FireBase", "TypeScript", "Shadcn"]
   },
   {
     id: "4",
@@ -65,8 +65,8 @@ const PROJECTS: Project[] = [
     description: "CRUD Básico para Profesores. Manejo de escuelas, materias, alumnos y evaluaciones",
     img: "/images/SEDA.png",
     linkGithub: "https://github.com/topidev/SEDA",
-    linkVercel: "",
-    stack: ["TypeScript", "Firebase", "Next.js", "Talwind"]
+    linkVercel: "https://seda-frontend.vercel.app/login",
+    stack: ["TypeScript", "NestJS", "Next.js", "Prisma"]
   },
 ]
 

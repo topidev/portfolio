@@ -64,10 +64,10 @@ export default function Contact() {
             {"// CONTACT"}
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-mono text-foreground mb-4">
-            ¿Trabajamos juntos?
+            ¿Buscas sumar talento a tu equipo?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Cuéntame sobre tu proyecto. Respondo en menos de 24 horas.
+            Estoy abierto a nuevas oportunidades y desafíos técnicos. Hablemos sobre cómo puedo aportar valor a tu empresa."
           </p>
         </motion.div>
 
