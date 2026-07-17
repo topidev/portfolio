@@ -46,7 +46,7 @@ const PROJECTS: Project[] = [
     img: "/images/dessetBloom.png",
     linkGithub: "https://github.com/topidev/floreria-la-paz",
     linkVercel: "https://floreria-la-paz.vercel.app/",
-    stack: ["React", "Firebase", "Stripe", "Zustand"]
+    stack: ["React", "Sanity Studio", "Stripe", "Zustand"]
   },
   {
     id: "3",
